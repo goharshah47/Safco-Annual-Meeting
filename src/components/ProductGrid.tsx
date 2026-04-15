@@ -49,23 +49,27 @@ export default function ProductGrid() {
           
           <div className="flex flex-wrap items-center gap-3">
             <div className="relative w-full sm:w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400 z-10" />
               <Input 
-                placeholder="Filter these deals..." 
+                placeholder="Search deals..." 
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="bg-slate-50 border-slate-200"
+                className="bg-white border-slate-200 pl-10 shadow-sm focus:border-primary transition-colors"
               />
             </div>
             
             <Select value={sortBy} onValueChange={setSortBy}>
-              <SelectTrigger className="w-[180px] bg-slate-50 border-slate-200">
-                <SelectValue placeholder="Sort by" />
+              <SelectTrigger className="w-[180px] bg-white border-slate-200 shadow-sm hover:border-primary transition-colors">
+                <div className="flex items-center gap-2">
+                  <SlidersHorizontal className="h-4 w-4 text-slate-400" />
+                  <SelectValue placeholder="Sort by" />
+                </div>
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="newest">Newest Arrivals</SelectItem>
-                <SelectItem value="price-low">Price: Low to High</SelectItem>
-                <SelectItem value="price-high">Price: High to Low</SelectItem>
-                <SelectItem value="rating">Top Rated</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem value="newest" className="hover:bg-slate-50">Newest Arrivals</SelectItem>
+                <SelectItem value="price-low" className="hover:bg-slate-50">Price: Low to High</SelectItem>
+                <SelectItem value="price-high" className="hover:bg-slate-50">Price: High to Low</SelectItem>
+                <SelectItem value="rating" className="hover:bg-slate-50">Top Rated</SelectItem>
               </SelectContent>
             </Select>
 
@@ -93,7 +97,7 @@ export default function ProductGrid() {
                   <button
                     onClick={() => setCategory('all')}
                     className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                      category === 'all' ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-600 hover:bg-slate-100'
+                      category === 'all' ? 'bg-[#005696]/10 text-[#005696] font-bold' : 'text-slate-600 hover:bg-slate-100'
                     }`}
                   >
                     All Categories
@@ -103,7 +107,7 @@ export default function ProductGrid() {
                       key={cat.id}
                       onClick={() => setCategory(cat.name)}
                       className={`block w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
-                        category === cat.name ? 'bg-primary/10 text-primary font-semibold' : 'text-slate-600 hover:bg-slate-100'
+                        category === cat.name ? 'bg-[#005696]/10 text-[#005696] font-bold' : 'text-slate-600 hover:bg-slate-100'
                       }`}
                     >
                       {cat.name}
@@ -139,7 +143,7 @@ export default function ProductGrid() {
                 )}
                 <button 
                   onClick={() => { setCategory('all'); setSearch(''); }}
-                  className="text-xs text-primary font-semibold hover:underline ml-2"
+                  className="text-xs text-[#005696] font-bold hover:underline ml-2"
                 >
                   Clear All
                 </button>
@@ -162,7 +166,7 @@ export default function ProductGrid() {
                 <Button 
                   variant="link" 
                   onClick={() => { setCategory('all'); setSearch(''); }}
-                  className="mt-4"
+                  className="mt-4 text-[#005696] font-bold"
                 >
                   Reset all filters
                 </Button>

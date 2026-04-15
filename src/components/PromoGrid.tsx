@@ -23,13 +23,13 @@ export default function PromoGrid() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#005696]/90 via-[#005696]/20 to-transparent" />
               </div>
               
               <div className="relative h-full min-h-[240px] p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-bold text-white mb-2">{tile.title}</h3>
-                <p className="text-slate-200 mb-6 max-w-md">{tile.subtitle}</p>
-                <Button className="w-fit bg-white text-slate-900 hover:bg-slate-100">
+                <h3 className="text-2xl font-black text-white mb-2 tracking-tight">{tile.title}</h3>
+                <p className="text-blue-50 mb-6 max-w-md font-medium">{tile.subtitle}</p>
+                <Button className="w-fit bg-white text-[#005696] hover:bg-slate-100 font-bold">
                   {tile.cta}
                 </Button>
               </div>

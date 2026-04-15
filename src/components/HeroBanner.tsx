@@ -1,53 +1,98 @@
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { ArrowRight, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function HeroBanner() {
   return (
-    <section className="relative overflow-hidden bg-slate-900 text-white py-12 lg:py-20">
-      <div className="absolute inset-0 opacity-20">
-        <img
-          src="https://picsum.photos/seed/dental-hero/1920/1080?blur=2"
-          alt="Dental Background"
-          className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-        />
+    <section className="relative w-full overflow-hidden bg-gradient-to-r from-[#dbeafe] via-[#eff6ff] to-[#005696] min-h-[320px] lg:min-h-[450px] flex items-center">
+      {/* Tech Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(#005696_1px,transparent_1px)] [background-size:20px_20px]" />
       </div>
-      <div className="container-custom relative z-10">
-        <div className="max-w-2xl">
+
+      <div className="container-custom relative z-10 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <Badge className="mb-4 bg-accent hover:bg-accent/90 text-white border-none flex w-fit items-center gap-1.5 px-3 py-1">
-              <Clock className="h-3.5 w-3.5" />
-              THIS WEEK ONLY
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Spring Dental <span className="text-secondary">Meeting Specials</span>
+            <div className="flex items-center gap-6 mb-6">
+              {/* AAE Logo Recreation */}
+              <div className="flex -space-x-4 shrink-0">
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#d4e157] opacity-80" />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#9ccc65] opacity-80" />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-[#005696] flex items-center justify-center text-white font-black text-xl lg:text-2xl leading-none">
+                  <div className="flex flex-col items-center">
+                    <span>aa</span>
+                    <span>ae</span>
+                  </div>
+                </div>
+              </div>
+              <h2 className="text-2xl lg:text-4xl font-medium text-[#003d6b] tracking-tight">
+                AAE26 Annual Meeting
+              </h2>
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-black text-[#003d6b] mb-6 tracking-tighter">
+              Exclusive <span className="text-[#005696]">Deals!</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-              Our biggest deals of the season are here. Save up to 40% on top-tier instruments, 
-              infection control, and restorative essentials.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 h-14 text-lg font-semibold">
-                Shop All Specials
+
+            <div className="flex items-center gap-3 mb-8">
+              <div className="bg-[#d4e157] text-[#003d6b] font-black text-2xl lg:text-4xl px-4 py-1 rounded-sm shadow-sm">
+                Visit us at Booth #910
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <Button size="lg" className="bg-[#005696] hover:bg-[#004578] text-white px-8 h-14 text-lg font-bold shadow-lg border-none">
+                Shop Meeting Specials
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 px-8 h-14 text-lg">
-                Download Flyer (PDF)
               </Button>
             </div>
           </motion.div>
+
+          {/* Right Content - Product Showcase */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="hidden lg:flex justify-end relative"
+          >
+            <div className="relative flex items-end gap-4">
+              {/* Product 1: Curing Light */}
+              <div className="relative group">
+                <div className="absolute -inset-8 bg-white/40 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
+                <img 
+                  src="https://images.unsplash.com/photo-1629679019911-20a1083c9479?auto=format&fit=crop&q=80&w=350&h=500" 
+                  alt="Dental Curing Light" 
+                  className="h-96 w-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)] relative z-10"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              {/* Product 2: Dental Tools & Handpiece */}
+              <div className="flex flex-col gap-6 mb-8">
+                <div className="bg-white p-2 rounded-lg shadow-xl rotate-3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=200&h=150" 
+                    alt="Dental Instruments" 
+                    className="h-28 w-auto object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="bg-white p-2 rounded-lg shadow-xl -rotate-2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=200&h=150" 
+                    alt="Dental Handpiece" 
+                    className="h-28 w-auto object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </div>
-      
-      {/* Decorative element */}
-      <div className="absolute right-0 bottom-0 w-1/3 h-full hidden lg:block">
-        <div className="w-full h-full bg-gradient-to-l from-primary/30 to-transparent" />
       </div>
     </section>
   );

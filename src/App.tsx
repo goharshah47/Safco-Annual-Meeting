@@ -41,11 +41,11 @@ export default function App() {
       case 'promo-grid': return <PromoGrid key="promo-grid" />;
       case 'categories': return <CategoryShortcuts key="categories" />;
       case 'featured-deals': return (
-        <section key="featured-deals" className="py-12 bg-slate-50 border-y border-clinical-border">
+        <section key="featured-deals" className="py-12 bg-[#f8fafc] border-y border-clinical-border">
           <div className="container-custom">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold text-slate-900">Featured Deals</h2>
-              <span className="text-xs font-bold text-accent bg-accent/10 px-2 py-1 rounded uppercase tracking-wider">Hand-Picked for You</span>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">Featured Deals</h2>
+              <span className="text-xs font-bold text-[#f27d26] bg-[#f27d26]/10 px-2 py-1 rounded uppercase tracking-wider">Hand-Picked for You</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {PRODUCTS.slice(0, 4).map(product => (
@@ -75,10 +75,10 @@ export default function App() {
       <Footer />
 
       {/* CMS Controls Toggle (Simulating a marketer's view) */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-24 right-6 z-50">
         <Button 
           onClick={() => setShowCMS(!showCMS)}
-          className="rounded-full h-14 w-14 shadow-2xl bg-slate-900 hover:bg-slate-800 text-white"
+          className="rounded-full h-14 w-14 shadow-2xl bg-[#005696] hover:bg-[#004578] text-white"
         >
           {showCMS ? <Eye className="h-6 w-6" /> : <Settings2 className="h-6 w-6" />}
         </Button>
@@ -98,7 +98,7 @@ export default function App() {
                 <Layout className="h-4 w-4 mr-2" />
                 Page Builder
               </h3>
-              <span className="text-[10px] font-bold bg-primary/10 text-primary px-2 py-0.5 rounded-full uppercase">Marketer View</span>
+              <span className="text-[10px] font-bold bg-[#005696]/10 text-[#005696] px-2 py-0.5 rounded-full uppercase">Marketer View</span>
             </div>
             
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -151,7 +151,7 @@ export default function App() {
             </div>
             
             <div className="p-4 bg-slate-50 border-t border-clinical-border">
-              <Button className="w-full bg-primary">Publish Changes</Button>
+              <Button className="w-full bg-[#005696] hover:bg-[#004578]">Publish Changes</Button>
             </div>
           </motion.div>
         )}

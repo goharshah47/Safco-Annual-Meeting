@@ -26,14 +26,14 @@ export default function ProductCard({ product }: ProductCardProps) {
         />
         
         {/* Badges */}
-        <div className="absolute top-2 left-2 flex flex-col gap-1.5">
+        <div className="absolute top-2 left-2 flex flex-col gap-1.5 z-10">
           {product.promo && (
-            <Badge className="bg-accent text-white border-none font-bold">
+            <Badge className="bg-[#f27d26] hover:bg-[#d66a1e] text-white border-none font-bold shadow-sm">
               {product.dealType === 'BOGO' ? 'BUY 1 GET 1' : `${discount}% OFF`}
             </Badge>
           )}
           {!product.inStock && (
-            <Badge variant="secondary" className="bg-slate-100 text-slate-500">
+            <Badge variant="secondary" className="bg-slate-100 text-slate-500 border-slate-200">
               OUT OF STOCK
             </Badge>
           )}
@@ -52,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">
           {product.brand}
         </div>
-        <h3 className="font-bold text-slate-900 line-clamp-2 mb-2 group-hover:text-primary transition-colors h-10">
+        <h3 className="font-bold text-slate-900 line-clamp-2 mb-2 group-hover:text-[#005696] transition-colors h-10">
           {product.name}
         </h3>
         
@@ -71,7 +71,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         <div className="flex items-baseline gap-2">
-          <span className="text-xl font-bold text-slate-900">${product.price.toFixed(2)}</span>
+          <span className="text-xl font-bold text-[#005696]">${product.price.toFixed(2)}</span>
           {product.originalPrice && (
             <span className="text-sm text-slate-400 line-through">${product.originalPrice.toFixed(2)}</span>
           )}
@@ -80,7 +80,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       <CardFooter className="p-4 pt-0">
         <Button 
-          className="w-full bg-primary hover:bg-primary/90 text-white font-semibold h-10"
+          className="w-full bg-[#005696] hover:bg-[#004578] text-white font-bold h-10 shadow-sm"
           disabled={!product.inStock}
         >
           <ShoppingCart className="mr-2 h-4 w-4" />
