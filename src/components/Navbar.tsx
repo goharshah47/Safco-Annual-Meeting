@@ -1,5 +1,5 @@
 import { Search, ShoppingCart, User, Menu, Phone } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from './Button';
 import { Input } from './ui/input';
 
 export default function Navbar() {

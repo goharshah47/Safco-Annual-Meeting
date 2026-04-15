@@ -1,5 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from './Button';
 import { Input } from './ui/input';
 
 export default function Footer() {

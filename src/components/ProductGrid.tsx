@@ -3,7 +3,7 @@ import { PRODUCTS, CATEGORIES } from '../data/mockData';
 import ProductCard from './ProductCard';
 import { Input } from './ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Button } from './ui/button';
+import { Button } from './Button';
 import { Filter, X, SlidersHorizontal, Search } from 'lucide-react';
 import { Badge } from './ui/badge';
 
