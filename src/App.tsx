@@ -8,7 +8,7 @@ import ProductCard from './components/ProductCard';
 import Footer from './components/Footer';
 import { DEFAULT_PAGE_CONFIG, PRODUCTS } from './data/mockData';
 import { SectionType } from './types';
-import { Button } from './components/Button';
+import { Button } from '@/components/ui/button';
 import { Settings2, Eye, Layout } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Button } from './Button';
+import { Button } from '@/components/ui/button';
 import { Badge } from './ui/badge';
 import { ArrowRight, Clock } from 'lucide-react';
 
