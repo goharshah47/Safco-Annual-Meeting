@@ -1,5 +1,5 @@
 import { PROMO_TILES } from '../data/mockData';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import { motion } from 'motion/react';
 
 export default function PromoGrid() {
