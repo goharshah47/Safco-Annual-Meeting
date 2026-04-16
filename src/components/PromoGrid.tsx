@@ -22,8 +22,9 @@ export default function PromoGrid() {
                   alt={tile.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#005696]/90 via-[#005696]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#005696]/70 via-[#005696]/10 to-transparent" />
               </div>
               
               <div className="relative h-full min-h-[240px] p-8 flex flex-col justify-end">

@@ -1,4 +1,4 @@
-import { Product, Category, PromoTile, PageConfig } from '../types';
+import { Product, Category, PromoTile, PageConfig, FeaturedDeal } from '../types';
 
 export const CATEGORIES: Category[] = [
   { id: 'endo', name: 'Endodontics', icon: 'Activity' },
@@ -9,6 +9,49 @@ export const CATEGORIES: Category[] = [
   { id: 'disposables', name: 'Disposables', icon: 'Trash2' },
 ];
 
+export const FEATURED_DEALS: FeaturedDeal[] = [
+  {
+    id: 'fd1',
+    offer: 'Up to 35% off',
+    category: 'Infection Control',
+    image: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=800&h=800',
+    cta: 'Shop now',
+    variant: 'standard'
+  },
+  {
+    id: 'fd2',
+    offer: 'Save 25%',
+    category: 'Restorative Materials',
+    image: 'https://images.unsplash.com/photo-1593054981162-e758355b485f?auto=format&fit=crop&q=80&w=800&h=800',
+    cta: 'Shop now',
+    variant: 'standard'
+  },
+  {
+    id: 'fd3',
+    offer: 'Up to 40% off',
+    category: 'Dental Instruments',
+    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800&h=800',
+    cta: 'Shop now',
+    variant: 'standard'
+  },
+  {
+    id: 'fd4',
+    offer: 'Bundle Deals',
+    category: 'Operatory Essentials',
+    image: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=800&h=800',
+    cta: 'View Bundles',
+    variant: 'standard'
+  },
+  {
+    id: 'fd5',
+    offer: 'Clearance',
+    category: 'PPE & Disposables',
+    image: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?auto=format&fit=crop&q=80&w=1200&h=600',
+    cta: 'View Clearance',
+    variant: 'featured'
+  }
+];
+
 export const PRODUCTS: Product[] = [
   {
     id: '1',
@@ -17,7 +60,7 @@ export const PRODUCTS: Product[] = [
     category: 'Endodontics',
     price: 45.99,
     originalPrice: 59.99,
-    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Percentage',
     rating: 4.8,
@@ -31,7 +74,7 @@ export const PRODUCTS: Product[] = [
     category: 'Infection Control',
     price: 12.50,
     originalPrice: 15.00,
-    image: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Fixed',
     rating: 4.9,
@@ -45,7 +88,7 @@ export const PRODUCTS: Product[] = [
     category: 'Restorative',
     price: 189.00,
     originalPrice: 220.00,
-    image: 'https://images.unsplash.com/photo-1593054981162-e758355b485f?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1593054981162-e758355b485f?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Bundle',
     rating: 4.7,
@@ -59,7 +102,7 @@ export const PRODUCTS: Product[] = [
     category: 'Instruments',
     price: 450.00,
     originalPrice: 550.00,
-    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Percentage',
     rating: 4.6,
@@ -73,7 +116,7 @@ export const PRODUCTS: Product[] = [
     category: 'Preventive',
     price: 24.99,
     originalPrice: 32.00,
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'BOGO',
     rating: 4.5,
@@ -87,7 +130,7 @@ export const PRODUCTS: Product[] = [
     category: 'Infection Control',
     price: 18.75,
     originalPrice: 22.50,
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Fixed',
     rating: 4.8,
@@ -101,7 +144,7 @@ export const PRODUCTS: Product[] = [
     category: 'Restorative',
     price: 320.00,
     originalPrice: 380.00,
-    image: 'https://images.unsplash.com/photo-1629679019911-20a1083c9479?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1629679019911-20a1083c9479?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Percentage',
     rating: 4.9,
@@ -115,7 +158,7 @@ export const PRODUCTS: Product[] = [
     category: 'Instruments',
     price: 65.00,
     originalPrice: 75.00,
-    image: 'https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1468493858157-0da44aaf1d13?auto=format&fit=crop&q=80&w=600&h=600',
     promo: true,
     dealType: 'Fixed',
     rating: 4.7,
@@ -129,7 +172,7 @@ export const PROMO_TILES: PromoTile[] = [
     id: 't1',
     title: 'Infection Control Essentials',
     subtitle: 'Stock up and save up to 20% on all Safco brand disposables.',
-    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=800&h=400',
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=1200&h=600',
     cta: 'Shop Now',
     link: '#',
     span: 'col-span-2',
@@ -138,7 +181,7 @@ export const PROMO_TILES: PromoTile[] = [
     id: 't2',
     title: 'New Year, New Gear',
     subtitle: 'Exclusive trade-in offers on handpieces.',
-    image: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?auto=format&fit=crop&q=80&w=600&h=600',
     cta: 'Learn More',
     link: '#',
   },
@@ -146,7 +189,7 @@ export const PROMO_TILES: PromoTile[] = [
     id: 't3',
     title: 'Restorative Bundles',
     subtitle: 'Buy 3, Get 1 Free on select composites.',
-    image: 'https://images.unsplash.com/photo-1593054981162-e758355b485f?auto=format&fit=crop&q=80&w=400&h=400',
+    image: 'https://images.unsplash.com/photo-1593054981162-e758355b485f?auto=format&fit=crop&q=80&w=600&h=600',
     cta: 'View Bundles',
     link: '#',
   },
@@ -155,9 +198,9 @@ export const PROMO_TILES: PromoTile[] = [
 export const DEFAULT_PAGE_CONFIG: PageConfig = {
   sections: [
     { type: 'hero', enabled: true, order: 1 },
-    { type: 'promo-grid', enabled: true, order: 2 },
-    { type: 'categories', enabled: true, order: 3 },
-    { type: 'featured-deals', enabled: true, order: 4 },
+    { type: 'featured-deals-grid', enabled: true, order: 2 },
+    { type: 'promo-grid', enabled: true, order: 3 },
+    { type: 'categories', enabled: true, order: 4 },
     { type: 'plp', enabled: true, order: 5 },
   ],
 };

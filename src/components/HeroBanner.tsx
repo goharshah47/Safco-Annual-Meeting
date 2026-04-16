@@ -65,28 +65,31 @@ export default function HeroBanner() {
               <div className="relative group">
                 <div className="absolute -inset-8 bg-white/40 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity" />
                 <img 
-                  src="https://images.unsplash.com/photo-1629679019911-20a1083c9479?auto=format&fit=crop&q=80&w=350&h=500" 
+                  src="https://images.unsplash.com/photo-1629679019911-20a1083c9479?auto=format&fit=crop&q=80&w=600&h=800" 
                   alt="Dental Curing Light" 
                   className="h-96 w-auto object-contain drop-shadow-[0_35px_35px_rgba(0,0,0,0.3)] relative z-10"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
               {/* Product 2: Dental Tools & Handpiece */}
               <div className="flex flex-col gap-6 mb-8">
                 <div className="bg-white p-2 rounded-lg shadow-xl rotate-3">
                   <img 
-                    src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=200&h=150" 
+                    src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=400&h=300" 
                     alt="Dental Instruments" 
                     className="h-28 w-auto object-contain"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
                 <div className="bg-white p-2 rounded-lg shadow-xl -rotate-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=200&h=150" 
+                    src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=400&h=300" 
                     alt="Dental Handpiece" 
                     className="h-28 w-auto object-contain"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroBanner from './components/HeroBanner';
+import FeaturedDealsGrid from './components/FeaturedDealsGrid';
 import PromoGrid from './components/PromoGrid';
 import CategoryShortcuts from './components/CategoryShortcuts';
 import ProductGrid from './components/ProductGrid';
@@ -38,23 +39,9 @@ export default function App() {
   const renderSection = (type: SectionType) => {
     switch (type) {
       case 'hero': return <HeroBanner key="hero" />;
+      case 'featured-deals-grid': return <FeaturedDealsGrid key="featured-deals-grid" />;
       case 'promo-grid': return <PromoGrid key="promo-grid" />;
       case 'categories': return <CategoryShortcuts key="categories" />;
-      case 'featured-deals': return (
-        <section key="featured-deals" className="py-12 bg-[#f8fafc] border-y border-clinical-border">
-          <div className="container-custom">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-black text-slate-900 tracking-tight">Featured Deals</h2>
-              <span className="text-xs font-bold text-[#f27d26] bg-[#f27d26]/10 px-2 py-1 rounded uppercase tracking-wider">Hand-Picked for You</span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {PRODUCTS.slice(0, 4).map(product => (
-                <ProductCard key={`featured-${product.id}`} product={product} />
-              ))}
-            </div>
-          </div>
-        </section>
-      );
       case 'plp': return <ProductGrid key="plp" />;
       default: return null;
     }

@@ -23,6 +23,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           alt={product.name}
           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
           referrerPolicy="no-referrer"
+          loading="lazy"
         />
         
         {/* Badges */}

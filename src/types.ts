@@ -29,7 +29,16 @@ export interface PromoTile {
   span?: 'col-span-1' | 'col-span-2';
 }
 
-export type SectionType = 'hero' | 'promo-grid' | 'categories' | 'featured-deals' | 'plp';
+export interface FeaturedDeal {
+  id: string;
+  offer: string;
+  category: string;
+  image?: string;
+  cta?: string;
+  variant: 'standard' | 'text-only' | 'featured';
+}
+
+export type SectionType = 'hero' | 'featured-deals-grid' | 'promo-grid' | 'categories' | 'plp';
 
 export interface PageConfig {
   sections: {
